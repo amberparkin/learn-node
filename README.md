@@ -29,7 +29,7 @@ Wikipedia says:
 
 Node has an asynchronous, event-driven I/O model. Node is an interface to the V8 JavaScript runtime – the JavaScript interpreter that runs in the Chrome browser.
 
-This is a pretty good intro video:  
+This is a pretty good intro video:
 [What is Node.js Exactly? - a beginners introduction to Nodejs](https://www.youtube.com/watch?v=pU9Q6oiQNd0)
 
 Node v4.0.0 is now available and supports lots of ES6 features.
@@ -290,7 +290,7 @@ Relative paths are explained in more detail in the [Node Docs](https://nodejs.or
 
 ## Create your first http server!
 
-Node.js has several modules compiled into the binary e.g. 'http', 'fs', 'querystring' . These are called 'core modules'.  
+Node.js has several modules compiled into the binary e.g. 'http', 'fs', 'querystring' . These are called 'core modules'.
 
 Core modules are always preferentially loaded.  For instance, require('http') will always return the built-in http module, even if there is a file by that name.
 
@@ -412,7 +412,7 @@ function(request, response) {
   if (url.indexOf('/cat') > -1) {
     // check if the url contains /cat and if so send back a link to a cat image e.g. from a database or an API
     response.writeHead(200, {"Content-Type": "text/html"});
-    response.end('<img src="http://charts.stocktwits.com/production/original_24310845.jpg?1404265667"/>')    
+    response.end('<img src="http://charts.stocktwits.com/production/original_24310845.jpg?1404265667"/>')
   }
 }
 ```
@@ -445,6 +445,14 @@ Create a `main.css` file and add a link to this file to your `index.html` page e
 </html>
 ```
 
+Add this to your `main.css` file:
+
+```
+h1 {
+  color: blue;
+}
+```
+
 Add the following code to your server handler as a final `else` branch.
 
 ```js
@@ -457,7 +465,7 @@ fs.readFile(__dirname + url, function(error, file){
     response.writeHead(200, {'Content-Type' : 'text/' + ext});
     response.end(file);
   }
-}
+});
 ```
 
 Okay let's break down this function:
@@ -465,7 +473,7 @@ Okay let's break down this function:
 1. To load the main.css file the client sends a request to the server with a url of `main.css`.
 2. The url is the filename, so the function can read the contents of the file from the filesystem.
 3. To know what type of file it is (e.g. css, js, html), we split the url on the `.`. So for `url = main.css`,  `url.split('.')` would result in an array with two elements: `[main, css]`. We take the second element of the array and set this to be the content type in the response header.
-4. Finally we send back the contents of the file in the response of the http request.  
+4. Finally we send back the contents of the file in the response of the http request.
 
 ## Nodemon
 
