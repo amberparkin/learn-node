@@ -457,7 +457,7 @@ fs.readFile(__dirname + url, function(error, file){
     response.writeHead(200, {'Content-Type' : 'text/' + ext});
     response.end(file);
   }
-}
+});
 ```
 
 Okay let's break down this function:
