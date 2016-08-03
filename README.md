@@ -56,7 +56,7 @@ Front end Javascript is executed in the site visitor's browser whereas server-si
 
 ## Installing Node
 
-Download Node from the [NodeJS website](https://docs.npmjs.com/getting-started/installing-node)
+Download Node from the [NodeJS website](https://docs.npmjs.com/getting-started/installing-node) - versions 4 and 6 are the long-term supported versions.
 
 ### The interactive node.js shell
 
@@ -72,7 +72,7 @@ The shell is a great way to test simple one liners. In order to escape from the 
 
 # SECTION 1
 
-## Node Modules and the Node Package Manager (NPM)
+## Node Modules and the Node Package Manager (npm)
 
 Modules are just small programs you can integrate with the bigger program you are writing.
 
@@ -91,7 +91,7 @@ Check the version
 
 ```js
 $ npm --version
-// the version should be 3.3.4
+// the version should be 3.10.5
 ```
 
 If it is not the latest version then type:
@@ -146,7 +146,7 @@ This takes you through the process of creating a file called a `package.json` wh
   "engines": {
     "node": ">= 0.10"
   },
-  "dependedncies": {
+  "devDependencies": {
      "pre-commit": "^1.0.7"
   }
 }
@@ -266,7 +266,7 @@ var Library = require('./library.js');
 Library.getBookAuthor("Emma");
 
 ```
-Node modules and Javascript files do not need an extension (e.g. 'js') when being specified inside `require()`.  However it can be helpful to add '.js' to the end of your local javascript files so it's easier to differentiate between your own files and node modules.
+Node modules and JavaScript files do not need an extension (e.g. 'js') when being specified inside `require()`.  However it can be helpful to add '.js' to the end of your local JavaScript files so it's easier to differentiate between your own files and node modules.
 
 E.g.
 
@@ -288,7 +288,7 @@ Relative paths are explained in more detail in the [Node Docs](https://nodejs.or
 
 # SECTION 3
 
-## Create your first http server!
+## Create your first HTTP server!
 
 Node.js has several modules compiled into the binary e.g. 'http', 'fs', 'querystring' . These are called 'core modules'.
 
@@ -323,7 +323,7 @@ http.createServer(handler).listen(port);
 console.log('node http server listening on http://localhost:' + port);
 ```
 
-Inside the call to `http.createServer()'` we pass in our handler function. The handler gets called every time someone connects to the app. Lets take a closer look at the two parameters the handler function takes:
+Inside the call to `http.createServer()'` we pass in our handler function. The handler gets called every time someone connects to the app. Let's take a closer look at the two parameters the handler function takes:
 
 * ***request*** - this object contains the information about what the visitor asked for including  name of the page that was requested, the settings, and any fields filled in on a form.
 
@@ -445,7 +445,7 @@ Create a `main.css` file and add a link to this file to your `index.html` page e
 </html>
 ```
 
-Add this to your `main.css` file:
+Add this to your `main.css` file and check to see that the changes have been applied in the browser:
 
 ```
 h1 {
