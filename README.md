@@ -78,7 +78,7 @@ Modules are just small programs you can integrate with the bigger program you ar
 
 'Core' Node modules come with Node automatically.  But there are thousands of open-source, 3rd-party Node modules that other clever people have written.  You can download useful 3rd-party modules (also known as "packages") from the Node Package Manager.
 
-The NPM website says:
+The npm website says:
 
 > ***npm*** makes it easy for JavaScript
 > developers to share and reuse code, and it
@@ -147,12 +147,15 @@ This takes you through the process of creating a file called a `package.json` wh
     "node": ">= 0.10"
   },
   "dependencies": {
+     "express": "^4.14.0"
+  },
+  "devDependencies": {
      "pre-commit": "^1.0.7"
   }
 }
 
 ```
-The package.json is the file that makes it possible for others to install and run your project, once you've built it.  When someone installs your project, npm will look through the package.json and install any modules that your project depends on, hence the name *dependencies*.
+The package.json is the file that makes it possible for others to install and run your project, once you've built it.  When someone installs your project, npm will look through the package.json and install any modules that your project depends on, hence the name *dependencies*. devDependencies are modules you only need for development purposes (so testing frameworks, for example); for more in-depth explanation, read this [Stack Overflow thread](http://stackoverflow.com/questions/18875674/whats-the-difference-between-dependencies-devdependencies-and-peerdependencies).
 
 Key attributes in the package.json:
 
@@ -445,7 +448,7 @@ Create a `main.css` file and add a link to this file to your `index.html` page e
 </html>
 ```
 
-Add this to your `main.css` file and check to see that the changes have been applied in the browser:
+Add this to your `main.css` file so you can see that the changes have been applied in the browser:
 
 ```
 h1 {
