@@ -146,7 +146,7 @@ This takes you through the process of creating a file called a `package.json` wh
   "engines": {
     "node": ">= 0.10"
   },
-  "dependencies": {
+  "devDependencies": {
      "pre-commit": "^1.0.7"
   }
 }
